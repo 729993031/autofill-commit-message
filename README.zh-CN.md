@@ -40,7 +40,7 @@ autofill-commit-message 需要两个参数，
 #### 3. 切换分支
 
 ```js
-git checkout -b feature@Pro-1234 或 git checkout -b feature@1234
+git checkout -b feature@Pro-1234 or git checkout -b feature@1234
 ```
 
 #### 4. 开发并提交
