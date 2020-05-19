@@ -8,7 +8,7 @@ Autofill commit message with keywords from branchname which matches the fixed fo
 
 ### Install
 
-```
+```js
 npm i autofill-commit-message -D 
 ```
 
