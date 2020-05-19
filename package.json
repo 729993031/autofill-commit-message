@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/JsonMa/autofill-commit-message.git"
+    "url": "https://github.com/Zwe1/autofill-commit-message.git"
   },
   "keywords": [
     "autofill-commit-message",
@@ -23,10 +23,7 @@
   ],
   "author": "Zwe1",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/JsonMa/autofill-commit-message/issues"
-  },
-  "homepage": "https://github.com/JsonMa/autofill-commit-message#readme",
+  "homepage": "https://github.com/Zwe1/autofill-commit-message",
   "devDependencies": {
     "chalk": "^4.0.0"
   }
