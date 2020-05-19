@@ -8,7 +8,7 @@
 
 ### 安装
 
-```
+```js
 npm i autofill-commit-message -D 
 ```
 
@@ -22,22 +22,32 @@ npm i autofill-commit-message -D
 
 #### 1. 安装 husky (已安装请忽略)
 
+```js
 npm i -D husky 
+```
 
 #### 2. 配置 husky 
 
-autofill-commit-message 需要两个参数，第一个为 commit-msg 文件目录, 使用 husky 时，默认传 **$HUSKY_GIT_PARAMS**; 第二个参数为项目名称, 当分支命如 **feature@PROJECT-1234** 时可省略;
+autofill-commit-message 需要两个参数，  
+
+第一个为 commit-msg 文件目录, 使用 husky 时，默认传 **$HUSKY_GIT_PARAMS**;   
+
+第二个参数为项目名称, 当分支命如 **feature@PROJECT-1234** 时可省略;
 
 <img src="./assets/husky.png">
 
 
 #### 3. 切换分支
 
+```js
 git checkout -b feature@Pro-1234 或 git checkout -b feature@1234
+```
 
 #### 4. 开发并提交
 
+```js
 git commit -m 'fix: hotfix'
+```
 
 ### 效果展示 
 

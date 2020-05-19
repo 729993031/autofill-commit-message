@@ -22,11 +22,17 @@ This plugin based on git hook commit-msg, and we recommend you use it with [husk
 
 #### 1. Install husky (skip when installed)
 
+```jd
 npm i -D husky 
+```
 
 #### 2.  Husky config
 
-Autofill-commit-message meets two parameters。One works for finding commit-msg file, please pass **$HUSKY_GIT_PARAMS** when use husky; the other works for completing project which is not necessary when your branchname looks like **feature@PROJECT-1234**.
+Autofill-commit-message meets two parameters。  
+
+One works for finding commit-msg file, please pass **$HUSKY_GIT_PARAMS** when use husky;   
+
+The other works for completing project which is not necessary when your branchname looks like **feature@PROJECT-1234**.
 
 <img src="./assets/husky.png">
 
@@ -35,11 +41,15 @@ Autofill-commit-message meets two parameters。One works for finding commit-msg 
 
 Branchname should obey the rules like below;
 
+```js
 git checkout -b feature@Pro-1234 或 git checkout -b feature@1234
+```
 
 #### 4. Develop and commit
 
+```js
 git commit -m 'fix: hotfix'
+```
 
 ### Result
 
