@@ -2,9 +2,9 @@
 
 从 branchname 中截取固定格式关键词（@***），并自动补充到 commit message 中。
 
-[中文文档]('https://github.com/Zwe1/autofill-commit-message/blob/master/README.zh-CN.md')
+[中文文档](https://github.com/Zwe1/autofill-commit-message/blob/master/README.zh-CN.md)
 
-[English Document]('https://github.com/Zwe1/autofill-commit-message')
+[English Document](https://github.com/Zwe1/autofill-commit-message)
 
 ### 安装
 

@@ -2,9 +2,9 @@
 
 Autofill commit message with keywords from branchname which matches the fixed format like @***.
 
-[中文文档]('https://github.com/Zwe1/autofill-commit-message/blob/master/README.zh-CN.md')
+[中文文档](https://github.com/Zwe1/autofill-commit-message/blob/master/README.zh-CN.md)
 
-[English Document]('https://github.com/Zwe1/autofill-commit-message')
+[English Document](https://github.com/Zwe1/autofill-commit-message)
 
 ### Install
 
