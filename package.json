@@ -1,23 +1,17 @@
 {
-  "name": "validate-branch-name",
-  "version": "1.0.6",
-  "description": "Git branch validator",
+  "name": "autofill-commit-message",
+  "version": "1.0.0",
+  "description": "auto fill commit message",
   "main": "index.js",
   "bin": {
-    "validate-branch-name": "./index.js"
-  },
-  "scripts": {
-    "check-coverage": "istanbul check-coverage --statements 100 --branches 100 --functions 100 --lines 100",
-    "test": "istanbul cover -x test/**/*.test.js node_modules/mocha/bin/_mocha -- -R spec test/**/*.test.js",
-    "lint": "eslint . --fix",
-    "ci": "npm run lint && npm run test && npm run check-coverage && codecov"
+    "autofill-commit-message": "./index.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/JsonMa/validate-branch-name.git"
+    "url": "git+https://github.com/JsonMa/autofill-commit-message.git"
   },
   "keywords": [
-    "validate-branch-name",
+    "autofill-commit-message",
     "branch-name",
     "branch",
     "hook",
@@ -25,25 +19,15 @@
     "git hook",
     "git branch name",
     "branch name",
-    "pre push",
-    "git push"
+    "commit-msg"
   ],
-  "author": "jsonma",
+  "author": "Zwe1",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/JsonMa/validate-branch-name/issues"
+    "url": "https://github.com/JsonMa/autofill-commit-message/issues"
   },
-  "homepage": "https://github.com/JsonMa/validate-branch-name#readme",
-  "dependencies": {
-    "cosmiconfig": "^5.2.1",
-    "current-git-branch": "^1.1.0"
-  },
+  "homepage": "https://github.com/JsonMa/autofill-commit-message#readme",
   "devDependencies": {
-    "chai": "^4.2.0",
-    "eslint": "^6.1.0",
-    "eslint-config-egg": "^7.4.1",
-    "eslint-plugin-import": "^2.18.2",
-    "istanbul": "^0.4.5",
-    "mocha": "^6.2.0"
+    "chalk": "^4.0.0"
   }
 }

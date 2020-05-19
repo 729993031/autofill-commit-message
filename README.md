@@ -1,81 +1,42 @@
-# validate-branch-name
-[中文文档](https://github.com/JsonMa/validate-branch-name/blob/master/README.zh-CN.md)
+# autofill-commit-message
 
-[English Document](https://github.com/JsonMa/validate-branch-name/blob/master/README.md)
+Autofill commit message with keywords from branchname which matches the fixed format like @***.
 
-[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/JsonMa/validate-branch-name/blob/master/LICENSE)
-[![npm version](https://img.shields.io/npm/v/validate-branch-name.svg?style=flat)](https://www.npmjs.com/package/validate-branch-name)
-[![Build Status](https://www.travis-ci.org/JsonMa/validate-branch-name.svg?branch=master)](https://www.travis-ci.org/JsonMa/validate-branch-name)
-[![codecov](https://codecov.io/gh/JsonMa/validate-branch-name/branch/master/graph/badge.svg)](https://codecov.io/gh/JsonMa/validate-branch-name)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/JsonMa/validate-branch-name/pulls)
-[![Known Vulnerabilities][snyk-image]][snyk-url]
-[![npm download][download-image]][download-url]
+### Install
 
-[snyk-image]: https://snyk.io/test/npm/validate-branch-name/badge.svg?style=flat-square
-[snyk-url]: https://snyk.io/test/npm/validate-branch-name
-[download-image]: https://img.shields.io/npm/dm/validate-branch-name.svg?style=flat-square
-[download-url]: https://npmjs.org/package/validate-branch-name
-
-Git branch name validator through hooks.
-
-## Description
-
-**validate-branch-name** is based on [Husky](https://github.com/typicode/husky), so make sure that your repository have installed husky (**version >= v1.0.0**) successfully.
-
-<!--
-Description here.
--->
-
-## Install
-
-```bash
-$ npm i validate-branch-name --save-dev
+```
+npm i autofill-commit-message -D 
 ```
 
-## Usage
+### Where to use
 
-**Configure hooks and pattern using package.json.**
+You can put the jiraId on your branchname with asked format, then it will be automatically recognized and fill at end of your commit message for free what saves a lot of time for committing.
 
-"validate-branch-name" attribute in package.json is optional, we have set default pattern and errorMsg in project. But you can still defined them as you like.
+### Usage
 
-```js
-// {app_root}/package.json
-{
-  "husky": {
-    "hooks": {
-      "pre-push": "validate-branch-name"
-    }
-  },
-  "validate-branch-name": {
-    "pattern": "^(master|develop){1}$|^(feature|fix|hotfix|release)\/.+$",
-    "errorMsg": "your own error message"
-  }
-}
-```
+This plugin based on git hook commit-msg, and we recommend you use it with [husky]('https://github.com/typicode/husky').
 
-**Default pattern: ^(master|develop){1}$|^(feature|fix|hotfix|release)\/.+$**
+1. Install husky (skip when installed)
 
-**Example:** `feature/test/pattern-test` would be passed.
+npm i -D husky 
 
-**Avaliable patterns:**
+2.  Husky config
 
-- ^(feature|fix|hotfix|release)\/.+ - branch has to start with _feature/, fix/, release/ or hotfix/_
+Autofill-commit-message meets two parameters。One works for finding commit-msg file, please pass **$HUSKY_GIT_PARAMS** when use husky; the other works for completing project which is not necessary when your branchname looks like **feature@PROJECT-1234**.
 
-* (feature|release|hotfix)\/(JIRA-\d+) - it should look like _feature/JIRA-1234_
+<img src="./assets/husky.png">
 
-- (feature|release|hotfix)\/(JIRA-\d+\/)?[a-z-]+ - it should look like _feature/branch-name_ or include JIRA's code like _feature/JIRA-1234/branch-name_
 
-**You can also configure hooks and pattern using `.validate-branch-namerc`, `.validate-branch-namerc.json` or `.validate-branch-namerc.js` file.**
+3. Branchname
 
-## Requirements
+Branchname should obey the rules like below;
 
-1. Husky requires Node `>= 8.6.0` and Git `>= 2.13.2`
-2. Husky version `>=  1.0.0`
+git checkout -b feature@Pro-1234 或 git checkout -b feature@1234
 
-## Questions & Suggestions
+4. Develop and commit
 
-Please open an issue [here](https://github.com/JsonMa/validate-branch-name/issues).
+git commit -m 'fix: hotfix'
 
-## License
+## Result
 
-[MIT](LICENSE)
+<img src="./assets/commit.png">
