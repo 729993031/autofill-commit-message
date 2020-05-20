@@ -43,7 +43,7 @@ if (jiraId && message && !message.includes(defaultProjectName)) {
   var msgContent = `${message} @${jiraId}`;
 
   fs.writeFile(messageFile, msgContent, 'utf8', err => {
-    if (!err) {
+    if (err) {
       console.log('Attch project id to end of the message failed, please commit with project id on your own');
     }
     process.exit(0);

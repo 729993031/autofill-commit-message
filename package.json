@@ -1,5 +1,5 @@
 {
-  "name": "autofill-commit-message",
+  "name": "@dp/autofill-commit-message",
   "version": "1.0.0",
   "description": "auto fill commit message",
   "main": "index.js",
