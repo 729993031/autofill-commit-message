@@ -1,6 +1,6 @@
 {
   "name": "@dp/autofill-commit-message",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "auto fill commit message",
   "main": "index.js",
   "bin": {
