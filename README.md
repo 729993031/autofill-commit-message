@@ -1,6 +1,6 @@
 # autofill-commit-message
 
-从 branchname 中截取固定格式关键词（@***），并自动补充到 commit message 中。
+从 branchname 中截取固定格式关键词（@\*\*\*），并自动补充到 commit message 中。
 
 [中文文档](https://github.com/Zwe1/autofill-commit-message/blob/master/README.zh-CN.md)
 
@@ -9,12 +9,12 @@
 ### 安装
 
 ```js
-npm i @dp/autofill-commit-message -D 
+npm i @dp/autofill-commit-message -D
 ```
 
 ### 应用场景
 
-将 branchname 中的 jiraId 截取并补充到 commit message 中，无需每次提交时填写 jiraId。
+将 branchname 中末尾的 jiraId 截取并补充到 commit message 中，无需每次提交时手动在 commit message 中填写 jiraId。
 
 ### 使用
 
@@ -23,24 +23,23 @@ npm i @dp/autofill-commit-message -D
 #### 1. 安装 husky (已安装请忽略)
 
 ```js
-npm i -D husky 
+npm i -D husky
 ```
 
-#### 2. 配置 husky 
+#### 2. 配置 husky
 
-autofill-commit-message 需要两个参数，  
+autofill-commit-message 需要两个参数，
 
-第一个为 commit-msg 文件目录, 使用 husky 时，默认传 **$HUSKY_GIT_PARAMS**;   
+第一个为 git commit-msg 文件目录, 使用 husky 时，默认传 **\$HUSKY_GIT_PARAMS**;
 
-第二个参数为项目名称, 当分支命如 **feature@PROJECT-1234** 时可省略;
+第二个参数为项目名称, 当分支命如 **feature@PROJECT-1234** 包含项目名称时可省略该参数;
 
 <img src="./assets/husky.png">
-
 
 #### 3. 切换分支
 
 ```js
-git checkout -b feature@PROJECT-1234 or git checkout -b feature@1234
+git checkout -b feature@PROJECT-1234 ｜ git checkout -b feature@1234
 ```
 
 #### 4. 开发并提交
@@ -49,6 +48,6 @@ git checkout -b feature@PROJECT-1234 or git checkout -b feature@1234
 git commit -m 'fix: hotfix'
 ```
 
-### 效果展示 
+### 效果展示
 
 <img src="./assets/commit.png">
