@@ -34,7 +34,7 @@ autofill-commit-message 需要两个参数，
 
 第二个参数为项目名称, 当分支命如 **feature@PROJECT-1234** 包含项目名称时可省略该参数;
 
-<img src="./assets/husky.png">
+<img src="https://tosv.byted.org/obj/tostest/bcdn/commit.png">
 
 #### 3. 切换分支
 
@@ -50,4 +50,4 @@ git commit -m 'fix: hotfix'
 
 ### 效果展示
 
-<img src="./assets/commit.png">
+<img src="https://tosv.byted.org/obj/tostest/bcdn/husky.png">
