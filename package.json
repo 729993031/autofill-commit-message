@@ -26,5 +26,8 @@
   "homepage": "https://github.com/Zwe1/autofill-commit-message",
   "devDependencies": {
     "chalk": "^4.0.0"
+  },
+  "dependencies": {
+    "commander": "^6.1.0"
   }
 }
